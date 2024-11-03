@@ -1,0 +1,75 @@
+#:kivy 2.3
+<RootWidget>:
+    orientation: 'vertical'
+    BoxLayout:
+        size_hint: 1, .6
+        orientation: 'horizontal'
+        Label:
+            id: total
+            text: ''
+        Label:
+            text: "/"
+        Label:
+            id: num1
+            text: ''
+
+    GridLayout:
+        rows: 5
+        Label:
+            id: status_message
+            text: 'Please select an answer from below!'
+            font_size: 30
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                value: 1
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+            Button:
+                value: 2
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+            Button:
+                value: 3
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                value: 4
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+            Button:
+                value: 5
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+            Button:
+                value: 6
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                value: 7
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+            Button:
+                value: 8
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+            Button:
+                value: 9
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                size_hint: 2, 1
+                background_normal: ''
+                background_color: .2, .2, .8, 1
+                text: f'New problem'
+                on_press: root.generate_problem()
+            Button:
+                value: 10
+                text: f'{self.value}'
+                on_press: root.on_button_press(self.value)
